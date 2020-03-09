@@ -10,7 +10,7 @@ using WebApp.Identity;
 namespace WebApp.Identity.Migrations
 {
     [DbContext(typeof(MyUserDbContext))]
-    [Migration("20200309192324_initial")]
+    [Migration("20200309195305_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -149,6 +149,8 @@ namespace WebApp.Identity.Migrations
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("Member");
 
                     b.Property<string>("NomeCompleto");
 
